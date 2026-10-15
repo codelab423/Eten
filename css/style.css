@@ -1,0 +1,282 @@
+:root {
+  --kleur-achtergrond: #fff8f0;
+  --kleur-kaart: #ffffff;
+  --kleur-primair: #e8602c;
+  --kleur-primair-donker: #c94e1f;
+  --kleur-tekst: #2b2320;
+  --kleur-subtekst: #7a6f68;
+  --kleur-rand: #efe3d8;
+  --kleur-waarschuwing-bg: #fde8dc;
+  --kleur-waarschuwing-tekst: #a1460c;
+  --kleur-ok: #2f8f4e;
+  --kleur-fout: #c2341d;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  background: var(--kleur-achtergrond);
+  color: var(--kleur-tekst);
+}
+
+h1 {
+  font-size: 1.3rem;
+  margin: 0;
+}
+
+h2 {
+  font-size: 1.05rem;
+  margin: 0 0 0.5rem;
+}
+
+.card {
+  background: var(--kleur-kaart);
+  border: 1px solid var(--kleur-rand);
+  border-radius: 14px;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+}
+
+/* --- Login / registratie --- */
+
+.auth-wrap {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}
+
+.auth-card {
+  width: 100%;
+  max-width: 380px;
+  text-align: center;
+}
+
+.subtitel {
+  color: var(--kleur-subtekst);
+  margin: 0.25rem 0 1rem;
+}
+
+.tabs {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.tab-knop {
+  flex: 1;
+  padding: 0.6rem;
+  border: 1px solid var(--kleur-rand);
+  background: var(--kleur-achtergrond);
+  border-radius: 10px;
+  font-size: 0.95rem;
+  cursor: pointer;
+}
+
+.tab-knop.actief {
+  background: var(--kleur-primair);
+  color: white;
+  border-color: var(--kleur-primair);
+}
+
+.auth-form,
+.gerecht-form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  text-align: left;
+}
+
+label {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  font-size: 0.9rem;
+  color: var(--kleur-subtekst);
+}
+
+input[type="email"],
+input[type="password"],
+input[type="text"] {
+  padding: 0.7rem;
+  border: 1px solid var(--kleur-rand);
+  border-radius: 10px;
+  font-size: 1rem;
+  color: var(--kleur-tekst);
+}
+
+/* --- Knoppen --- */
+
+.knop {
+  border: none;
+  border-radius: 10px;
+  padding: 0.7rem 1rem;
+  font-size: 0.95rem;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.knop-primair {
+  background: var(--kleur-primair);
+  color: white;
+}
+
+.knop-primair:hover {
+  background: var(--kleur-primair-donker);
+}
+
+.knop-primair:disabled {
+  background: #d8c9bd;
+  cursor: not-allowed;
+}
+
+.knop-secundair {
+  background: var(--kleur-achtergrond);
+  border: 1px solid var(--kleur-rand);
+  color: var(--kleur-tekst);
+}
+
+.knop-actief {
+  background: var(--kleur-ok);
+  color: white;
+}
+
+.knop-klein {
+  padding: 0.4rem 0.7rem;
+  font-size: 0.85rem;
+  background: var(--kleur-achtergrond);
+  border: 1px solid var(--kleur-rand);
+}
+
+.knop-groot {
+  width: 100%;
+  padding: 1rem;
+  font-size: 1.05rem;
+}
+
+.link-knop {
+  background: none;
+  border: none;
+  color: var(--kleur-subtekst);
+  text-decoration: underline;
+  cursor: pointer;
+  font-size: 0.85rem;
+  padding: 0.3rem 0;
+}
+
+/* --- Meldingen --- */
+
+.melding {
+  margin-top: 0.8rem;
+  font-size: 0.9rem;
+  padding: 0.6rem;
+  border-radius: 8px;
+}
+
+.melding-fout {
+  background: #fde7e3;
+  color: var(--kleur-fout);
+}
+
+.melding-ok {
+  background: #e3f3e6;
+  color: var(--kleur-ok);
+}
+
+/* --- App-pagina --- */
+
+.app-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.8rem 1rem;
+  background: var(--kleur-kaart);
+  border-bottom: 1px solid var(--kleur-rand);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.header-rechts {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-size: 0.85rem;
+  color: var(--kleur-subtekst);
+}
+
+.app-wrap {
+  max-width: 480px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+.hulptekst {
+  color: var(--kleur-subtekst);
+  font-size: 0.85rem;
+  margin: 0 0 0.8rem;
+}
+
+.banner-vastgesteld {
+  background: #fff3e0;
+  border-color: #ffd9a0;
+  text-align: center;
+  font-size: 1.05rem;
+}
+
+.gerechten-lijst {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.gerecht-rij {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.6rem;
+  padding: 0.7rem;
+  border: 1px solid var(--kleur-rand);
+  border-radius: 10px;
+}
+
+.gerecht-rij-actief {
+  border-color: var(--kleur-ok);
+  background: #f3faf4;
+}
+
+.gerecht-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.gerecht-naam {
+  font-weight: 600;
+}
+
+.gerecht-laatst {
+  font-size: 0.8rem;
+  color: var(--kleur-subtekst);
+}
+
+.gerecht-laatst.waarschuwing {
+  color: var(--kleur-waarschuwing-tekst);
+  font-weight: 600;
+}
+
+.gerecht-stemmen {
+  font-size: 0.8rem;
+  color: var(--kleur-subtekst);
+  margin-top: 0.15rem;
+}
+
+.stem-knop {
+  flex-shrink: 0;
+  white-space: nowrap;
+}

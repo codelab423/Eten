@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="nl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Wat eten we vanavond?</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <main class="auth-wrap">
+    <div class="card auth-card">
+      <h1>🍽️ Wat eten we vanavond?</h1>
+      <p class="subtitel">Stem mee met het gezin!</p>
+
+      <div class="tabs">
+        <button class="tab-knop actief" id="tab-login" type="button">Inloggen</button>
+        <button class="tab-knop" id="tab-signup" type="button">Account maken</button>
+      </div>
+
+      <form id="login-form" class="auth-form">
+        <label>
+          E-mailadres
+          <input type="email" id="login-email" required autocomplete="email" />
+        </label>
+        <label>
+          Wachtwoord
+          <input type="password" id="login-password" required autocomplete="current-password" />
+        </label>
+        <button type="submit" class="knop knop-primair">Inloggen</button>
+      </form>
+
+      <form id="signup-form" class="auth-form" hidden>
+        <label>
+          Jouw naam
+          <input type="text" id="signup-naam" required placeholder="Bijv. Mama, Papa, Tim..." />
+        </label>
+        <label>
+          E-mailadres
+          <input type="email" id="signup-email" required autocomplete="email" />
+        </label>
+        <label>
+          Wachtwoord
+          <input type="password" id="signup-password" required minlength="6" autocomplete="new-password" />
+        </label>
+        <button type="submit" class="knop knop-primair">Account maken</button>
+      </form>
+
+      <p id="auth-melding" class="melding" hidden></p>
+    </div>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.4/dist/umd/supabase.js"></script>
+  <script src="js/config.js"></script>
+  <script src="js/supabaseClient.js"></script>
+  <script src="js/auth.js"></script>
+</body>
+</html>

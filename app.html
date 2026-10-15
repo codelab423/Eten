@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="nl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Wat eten we vanavond?</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header class="app-header">
+    <h1>🍽️ Wat eten we vanavond?</h1>
+    <div class="header-rechts">
+      <span id="welkom-naam"></span>
+      <button id="uitlog-knop" class="knop knop-klein">Uitloggen</button>
+    </div>
+  </header>
+
+  <main class="app-wrap">
+    <div id="winnaar-banner" class="card banner-vastgesteld" hidden></div>
+
+    <section class="card">
+      <h2>Stand van vandaag</h2>
+      <p class="hulptekst">Breng je stem uit op een gerecht. Je kan je stem de hele dag nog wijzigen.</p>
+      <div id="gerechten-lijst" class="gerechten-lijst"></div>
+      <button id="vernieuw-knop" class="link-knop" type="button">🔄 Vernieuwen</button>
+    </section>
+
+    <section class="card">
+      <button id="winnaar-knop" class="knop knop-primair knop-groot" disabled>
+        Dit eten we vandaag 🎉
+      </button>
+    </section>
+
+    <section class="card">
+      <h2>Nieuw gerecht toevoegen</h2>
+      <form id="gerecht-form" class="gerecht-form">
+        <label>
+          Naam van het gerecht
+          <input type="text" id="gerecht-naam" required placeholder="Bijv. Spaghetti" />
+        </label>
+        <label>
+          Emoji (optioneel)
+          <input type="text" id="gerecht-emoji" maxlength="4" placeholder="🍝" />
+        </label>
+        <button type="submit" class="knop knop-primair">Toevoegen</button>
+      </form>
+      <p id="app-melding" class="melding" hidden></p>
+    </section>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.4/dist/umd/supabase.js"></script>
+  <script src="js/config.js"></script>
+  <script src="js/supabaseClient.js"></script>
+  <script src="js/helpers.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
